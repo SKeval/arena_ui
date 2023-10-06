@@ -194,6 +194,11 @@ class _Arena_ScreenState extends State<Arena_Screen> {
               Expanded(
                 child: PageView(
                   controller: _pageController,
+                  onPageChanged: (value) {
+                    setState(() {
+                      currentindex = value;
+                    });
+                  },
                   children: const [
                     Fire_Page(),
                     Remote_Page(),

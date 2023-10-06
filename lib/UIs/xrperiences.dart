@@ -28,7 +28,8 @@ class _XRperiences_PageState extends State<XRperiences_Page> {
               height: height / 1.038,
               decoration: BoxDecoration(
                 color: Background,
-                borderRadius: const BorderRadius.vertical(top: Radius.circular(20)),
+                borderRadius:
+                    const BorderRadius.vertical(top: Radius.circular(20)),
               ),
               child: Padding(
                 padding: const EdgeInsets.all(8.0),
@@ -48,7 +49,7 @@ class _XRperiences_PageState extends State<XRperiences_Page> {
                               Navigator.of(context).pop();
                             },
                           ),
-                          text('XRames',
+                          text('XRperiences',
                               size: 25,
                               weight: FontWeight.bold,
                               color: Common_white),
@@ -60,7 +61,6 @@ class _XRperiences_PageState extends State<XRperiences_Page> {
                       top: 60,
                       child: Container(
                         width: width / 8,
-                        height: height / 1.5,
                         decoration: BoxDecoration(
                             color: grey,
                             borderRadius: BorderRadius.circular(10)),
