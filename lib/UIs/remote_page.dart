@@ -31,7 +31,7 @@ class _Remote_PageState extends State<Remote_Page> {
                       child: Column(
                     mainAxisAlignment: MainAxisAlignment.end,
                     children: [
-                      text("Name here", color: Background),
+                      text("Name here", color: black, weight: FontWeight.bold),
                     ],
                   )),
                 );
@@ -47,18 +47,18 @@ class _Remote_PageState extends State<Remote_Page> {
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     text("Most Played",
-                        color: Common_white, weight: FontWeight.bold, size: 15),
+                        color: black, weight: FontWeight.bold, size: 15),
                     GestureDetector(
                         onTap: () {
                           Navigator.of(context).push(MaterialPageRoute(
                             builder: (context) => const XRames_Page(),
                           ));
                         },
-                        child: text("View all", color: Common_white, size: 15)),
+                        child: text("View all",
+                            color: Color(0xaa000000), size: 15)),
                   ],
                 ),
-                text("Play a new game everyday !",
-                    color: Common_white, size: 10)
+                text("Play a new game everyday !", color: black, size: 10)
               ],
             ),
           ),

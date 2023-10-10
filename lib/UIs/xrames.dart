@@ -29,7 +29,8 @@ class _XRames_PageState extends State<XRames_Page> {
               height: height / 1.038,
               decoration: BoxDecoration(
                 color: Background,
-                borderRadius: const BorderRadius.vertical(top: Radius.circular(20)),
+                borderRadius:
+                    const BorderRadius.vertical(top: Radius.circular(20)),
               ),
               child: Padding(
                 padding: const EdgeInsets.all(8.0),
@@ -43,17 +44,33 @@ class _XRames_PageState extends State<XRames_Page> {
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
                           button(
-                            image: Image.asset(close),
-                            bgcolor: grey,
+                            image: Image.asset(
+                              close,
+                              color: Colors.white,
+                            ),
+                            bgcolor: Color(0xaaEBEBEB),
                             onPressed: () {
                               Navigator.of(context).pop();
                             },
                           ),
-                          text('XRames',
-                              size: 25,
-                              weight: FontWeight.bold,
-                              color: Common_white),
-                          button(image: Image.asset(search), bgcolor: grey),
+                          Container(
+                            width: width / 1.6,
+                            height: width / 9,
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(10),
+                              color: Color(0xaaEBEBEB),
+                            ),
+                            child: Center(
+                              child: text('XRames',
+                                  size: 25,
+                                  weight: FontWeight.bold,
+                                  color: black),
+                            ),
+                          ),
+                          button(
+                            image: Image.asset(search),
+                            bgcolor: Color(0xaaEBEBEB),
+                          ),
                         ],
                       ),
                     ),
@@ -62,7 +79,7 @@ class _XRames_PageState extends State<XRames_Page> {
                       child: Container(
                         width: width / 8,
                         decoration: BoxDecoration(
-                            color: grey,
+                            color: Color(0xaaEBEBEB),
                             borderRadius: BorderRadius.circular(10)),
                         child: Column(
                           children: [
@@ -106,7 +123,7 @@ class _XRames_PageState extends State<XRames_Page> {
                                 mainAxisAlignment: MainAxisAlignment.end,
                                 children: [
                                   text("Rangoli Painting",
-                                      color: Background, size: 15),
+                                      color: black, size: 15),
                                 ],
                               ),
                             );

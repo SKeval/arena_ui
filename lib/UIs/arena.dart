@@ -38,7 +38,7 @@ class _Arena_ScreenState extends State<Arena_Screen> {
     double height = MediaQuery.of(context).size.height;
     return SafeArea(
       child: Scaffold(
-        backgroundColor: Colors.black,
+        backgroundColor: Colors.white,
         body: Padding(
           padding: const EdgeInsets.all(5.0),
           child: Column(
@@ -53,21 +53,9 @@ class _Arena_ScreenState extends State<Arena_Screen> {
                       decoration: BoxDecoration(
                           color: Common_white,
                           borderRadius: BorderRadius.circular(8)),
-                      child: Padding(
-                        padding: const EdgeInsets.all(10.0),
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                          children: [
-                            Image.asset(coin),
-                            const SizedBox(
-                              width: 5,
-                            ),
-                            text(
-                              "$count",
-                              color: Background,
-                            ),
-                          ],
-                        ),
+                      child: Image.asset(
+                        coin, scale: 0.7,
+                        //fit: BoxFit.cover,
                       ),
                     ),
                     Container(
@@ -78,9 +66,7 @@ class _Arena_ScreenState extends State<Arena_Screen> {
                           borderRadius: BorderRadius.circular(8)),
                       child: Center(
                           child: text("Arena",
-                              color: Background,
-                              weight: FontWeight.bold,
-                              size: 20)),
+                              color: black, weight: FontWeight.bold, size: 20)),
                     ),
                     Container(
                       height: height / 18,
@@ -108,7 +94,7 @@ class _Arena_ScreenState extends State<Arena_Screen> {
               Container(
                 margin: const EdgeInsets.only(
                     bottom: 15, right: 15, left: 15, top: 10),
-                height: height / 15,
+                height: height / 14,
                 width: width / 2,
                 decoration: BoxDecoration(
                     color: Common_white,
@@ -129,15 +115,15 @@ class _Arena_ScreenState extends State<Arena_Screen> {
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
                             Image.asset(fire),
-                            Visibility(
-                                visible: currentindex == 0,
-                                child: const SizedBox(
-                                  height: 10,
-                                  width: 10,
-                                  child: CircleAvatar(
-                                    backgroundColor: Colors.blue,
-                                  ),
-                                ))
+                            SizedBox(
+                              height: 10,
+                              width: 10,
+                              child: CircleAvatar(
+                                backgroundColor: currentindex == 0
+                                    ? Colors.blue
+                                    : Colors.transparent,
+                              ),
+                            )
                           ],
                         )),
                     InkWell(
@@ -153,15 +139,15 @@ class _Arena_ScreenState extends State<Arena_Screen> {
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
                             Image.asset(remote),
-                            Visibility(
-                                visible: currentindex == 1,
-                                child: const SizedBox(
-                                  height: 10,
-                                  width: 10,
-                                  child: CircleAvatar(
-                                    backgroundColor: Colors.blue,
-                                  ),
-                                ))
+                            SizedBox(
+                              height: 10,
+                              width: 10,
+                              child: CircleAvatar(
+                                backgroundColor: currentindex == 1
+                                    ? Colors.blue
+                                    : Colors.transparent,
+                              ),
+                            )
                           ],
                         )),
                     InkWell(
@@ -177,15 +163,15 @@ class _Arena_ScreenState extends State<Arena_Screen> {
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
                             Image.asset(vr),
-                            Visibility(
-                                visible: currentindex == 2,
-                                child: const SizedBox(
-                                  height: 10,
-                                  width: 10,
-                                  child: CircleAvatar(
-                                    backgroundColor: Colors.blue,
-                                  ),
-                                ))
+                            SizedBox(
+                              height: 10,
+                              width: 10,
+                              child: CircleAvatar(
+                                backgroundColor: currentindex == 2
+                                    ? Colors.blue
+                                    : Colors.transparent,
+                              ),
+                            )
                           ],
                         ))
                   ],

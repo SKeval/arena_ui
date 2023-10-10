@@ -43,17 +43,32 @@ class _XRperiences_PageState extends State<XRperiences_Page> {
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
                           button(
-                            image: Image.asset(close),
-                            bgcolor: grey,
+                            image: Image.asset(
+                              close,
+                              color: Background,
+                            ),
+                            bgcolor: Color(0xaaEBEBEB),
                             onPressed: () {
                               Navigator.of(context).pop();
                             },
                           ),
-                          text('XRperiences',
-                              size: 25,
-                              weight: FontWeight.bold,
-                              color: Common_white),
-                          button(image: Image.asset(search), bgcolor: grey),
+                          Container(
+                            width: width / 1.6,
+                            height: width / 9,
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(10),
+                              color: Color(0xaaEBEBEB),
+                            ),
+                            child: Center(
+                              child: text('XRperiences',
+                                  size: 25,
+                                  weight: FontWeight.bold,
+                                  color: black),
+                            ),
+                          ),
+                          button(
+                              image: Image.asset(search),
+                              bgcolor: Color(0xaaEBEBEB)),
                         ],
                       ),
                     ),
@@ -62,7 +77,7 @@ class _XRperiences_PageState extends State<XRperiences_Page> {
                       child: Container(
                         width: width / 8,
                         decoration: BoxDecoration(
-                            color: grey,
+                            color: Color(0xaaEBEBEB),
                             borderRadius: BorderRadius.circular(10)),
                         child: Column(
                           children: [
@@ -93,7 +108,7 @@ class _XRperiences_PageState extends State<XRperiences_Page> {
                           gridDelegate:
                               const SliverGridDelegateWithMaxCrossAxisExtent(
                                   maxCrossAxisExtent: 200,
-                                  childAspectRatio: 1,
+                                  childAspectRatio: 3 / 4,
                                   crossAxisSpacing: 5,
                                   mainAxisSpacing: 5),
                           itemBuilder: (context, index) {
@@ -101,6 +116,13 @@ class _XRperiences_PageState extends State<XRperiences_Page> {
                               decoration: BoxDecoration(
                                 borderRadius: BorderRadius.circular(10),
                                 color: box_color,
+                              ),
+                              child: Column(
+                                mainAxisAlignment: MainAxisAlignment.end,
+                                children: [
+                                  text("Rangoli Painting",
+                                      color: black, size: 15),
+                                ],
                               ),
                             );
                           },
